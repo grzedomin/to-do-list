@@ -1,0 +1,13 @@
+.html {
+    box-sizing: border-box;
+}
+    
+*, ::after ::before {
+    box-sizing: inherit;
+}
+
+.body {
+    background-color: rgb(241, 241, 241);
+    font-family: 'Play', sans-serif;
+    margin: 12px;
+}
