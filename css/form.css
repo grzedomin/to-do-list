@@ -11,6 +11,7 @@
 .form__button {
     padding: 10px;
     border: none;
+    margin-left: 10px;
 }
 
 .form__button:hover {

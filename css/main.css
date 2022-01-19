@@ -42,6 +42,10 @@
     align-items: center;
 }
 
+.main__list {
+    padding: 0px;
+}
+
 .main__listItem {
     list-style-type: none;
     display: flex;
