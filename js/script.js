@@ -50,18 +50,17 @@
 
         for (task of tasks) {
             htmlString += `
-            <li ${task.done ? "class=\"main__taskList--done\"" : ""}>
+            <li ${task.done ? "class=\"main__taskList--done\"" : "class=\"main__listItem\""} >
                 <button class="js-taskDone">zrobione</button>
                      ${task.content}
-                <button class="js-taskRemove">usun</button>
+                <button class="js-taskRemove main__taskRemoveButton"></button>
             </li>
             
             `;
         };
         document.querySelector(".js-taskList").innerHTML = htmlString;
 
-       bindEvents();
-
+        bindEvents();
     };
 
     const onFormSubmit = (event) => {

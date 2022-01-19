@@ -35,4 +35,33 @@
 
 .main__taskList--done {
     text-decoration: line-through;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main__listItem {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.main__taskRemoveButton {
+    font-size: 20px;
+    min-height: 36px;
+    min-width: 36px;
+    border: none;
+    background: url("../images/trash.png");
+    background-color: rgb(226, 23, 63);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main__taskRemoveButton:hover {
+    background-color: rgb(235, 80, 111);
 }
