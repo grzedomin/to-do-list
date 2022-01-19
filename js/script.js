@@ -10,11 +10,22 @@
         }
     ];
 
+    const newTask = (addNewTask) => {
+        tasks.push({
+            content: addNewTask,
+        }); render();
+    };
+
+    const taskRemove = (index) => {
+        tasks.splice(index, 1);
+        render();
+    };
+
     const render = () => {
-        
+
         let htmlString = "";
-        
-        for(task of tasks) {
+
+        for (task of tasks) {
             htmlString += `
             <li>
             ${task.content}
@@ -29,28 +40,23 @@
 
         removeTasks.forEach((removeTask, index) => {
             removeTask.addEventListener("click", () => {
-                tasks.splice(index, 1);
-                render();
+                taskRemove(index);
             });
         });
 
     };
-    
+
     const init = () => {
         const form = document.querySelector(".js-form");
         form.addEventListener("submit", (event) => {
             event.preventDefault();
 
-                addNewTask = document.querySelector(".js-newTask").value.trim();
-                
-                if(addNewTask === ""){
-                    return;
-                }
-                
-                    tasks.push({
-                        content: addNewTask,
-                    }); render();
-                
+            addNewTask = document.querySelector(".js-newTask").value.trim();
+
+            if (addNewTask === "") {
+                return;
+            }
+            newTask(addNewTask);
         });
         render();
     };
