@@ -80,6 +80,16 @@
     background-repeat: no-repeat;
     background-position: center;
 }
+.main__taskDoneButton--done {
+    font-size: 20px;
+    min-height: 36px;
+    min-width: 36px;
+    border: none;   
+    background: url("../images/check.png");
+    background-color: rgb(54, 199, 18);
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
 .main__taskDoneButton:hover {
     background-color: rgb(106, 209, 81);
