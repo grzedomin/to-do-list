@@ -31,6 +31,16 @@
         form.addEventListener("submit", (event) => {
             event.preventDefault();
 
+                addNewTask = document.querySelector(".js-newTask").value.trim();
+                
+                if(addNewTask === ""){
+                    return;
+                }
+                
+                    tasks.push({
+                        content: addNewTask,
+                    }); render();
+                
         });
         render();
     };
