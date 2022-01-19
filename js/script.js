@@ -21,26 +21,40 @@
         render();
     };
 
+    const toggleTaskDone = (task) => {
+        tasks[task].done = !tasks[task].done;
+        render();
+    }
+
     const render = () => {
 
         let htmlString = "";
 
         for (task of tasks) {
             htmlString += `
-            <li>
+            <li ${task.done ? "class=\"main__taskList--done\"" : ""}>
+            <button class="js-taskDone">zrobione</button>
             ${task.content}
-            <button class="js-remove">usun</button>
+            <button class="js-taskRemove">usun</button>
             </li>
             
             `;
         };
         document.querySelector(".js-taskList").innerHTML = htmlString;
 
-        const removeTasks = document.querySelectorAll(".js-remove");
+        const removeTasks = document.querySelectorAll(".js-taskRemove");
 
         removeTasks.forEach((removeTask, index) => {
             removeTask.addEventListener("click", () => {
                 taskRemove(index);
+            });
+        });
+
+        const toggleDoneTask = document.querySelectorAll(".js-taskDone");
+
+        toggleDoneTask.forEach((toggleDone, task) => {
+            toggleDone.addEventListener("click", () => {
+                toggleTaskDone(task);
             });
         });
 
@@ -59,7 +73,7 @@
 
     const init = () => {
         const form = document.querySelector(".js-form");
-        
+
         form.addEventListener("submit", onFormSubmit);
         render();
     };
