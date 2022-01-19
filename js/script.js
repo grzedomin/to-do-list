@@ -18,11 +18,21 @@
             htmlString += `
             <li>
             ${task.content}
+            <button class="js-remove">usun</button>
             </li>
             
             `;
         };
         document.querySelector(".js-taskList").innerHTML = htmlString;
+
+        const removeTasks = document.querySelectorAll(".js-remove");
+
+        removeTasks.forEach((removeTask, index) => {
+            removeTask.addEventListener("click", () => {
+                tasks.splice(index, 1);
+                render();
+            });
+        });
 
     };
     
