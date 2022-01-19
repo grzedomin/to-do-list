@@ -51,7 +51,7 @@
         for (task of tasks) {
             htmlString += `
             <li ${task.done ? "class=\"main__taskList--done\"" : "class=\"main__listItem\""} >
-                <button class="js-taskDone">zrobione</button>
+                <button class="js-taskDone main__taskDoneButton"></button>
                      ${task.content}
                 <button class="js-taskRemove main__taskRemoveButton"></button>
             </li>
