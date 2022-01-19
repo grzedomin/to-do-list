@@ -24,24 +24,9 @@
     const toggleTaskDone = (task) => {
         tasks[task].done = !tasks[task].done;
         render();
-    }
+    };
 
-    const render = () => {
-
-        let htmlString = "";
-
-        for (task of tasks) {
-            htmlString += `
-            <li ${task.done ? "class=\"main__taskList--done\"" : ""}>
-            <button class="js-taskDone">zrobione</button>
-            ${task.content}
-            <button class="js-taskRemove">usun</button>
-            </li>
-            
-            `;
-        };
-        document.querySelector(".js-taskList").innerHTML = htmlString;
-
+    const bindEvents = () => {
         const removeTasks = document.querySelectorAll(".js-taskRemove");
 
         removeTasks.forEach((removeTask, index) => {
@@ -57,6 +42,25 @@
                 toggleTaskDone(task);
             });
         });
+    };
+
+    const render = () => {
+
+        let htmlString = "";
+
+        for (task of tasks) {
+            htmlString += `
+            <li ${task.done ? "class=\"main__taskList--done\"" : ""}>
+                <button class="js-taskDone">zrobione</button>
+                     ${task.content}
+                <button class="js-taskRemove">usun</button>
+            </li>
+            
+            `;
+        };
+        document.querySelector(".js-taskList").innerHTML = htmlString;
+
+       bindEvents();
 
     };
 
