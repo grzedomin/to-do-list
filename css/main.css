@@ -40,6 +40,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding-top: 8px;
 }
 
 .main__list {
@@ -74,8 +75,7 @@
     font-size: 20px;
     min-height: 36px;
     min-width: 36px;
-    border: none;
-    background: url("../images/check.png");
+    border: none;   
     background-color: rgb(54, 199, 18);
     background-repeat: no-repeat;
     background-position: center;
