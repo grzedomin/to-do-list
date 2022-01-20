@@ -8,10 +8,26 @@
     padding: 5px;
 }
 
+@media (max-width: 767px) {
+    .form__input {
+        flex-basis: 100%;
+    }
+}
+
 .form__button {
     padding: 10px;
     border: none;
     margin-left: 10px;
+}
+
+
+@media (max-width: 767px) {
+    .form__button {
+        flex-basis: 100%;
+        justify-content: center;
+        margin-left: 0px;
+        margin-top: 8px;
+    }
 }
 
 .form__button:hover {
