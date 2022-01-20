@@ -52,7 +52,7 @@
             htmlString += `
             <li class="main__listItem${task.done ? " main__taskList--done" : ""}">
                 <button class="js-taskDone main__taskDoneButton${task.done ? " main__taskDoneButton--done" : ""}"></button>
-                    ${task.content}
+                   <div class="test">${task.content}</div>
                 <button class="js-taskRemove main__taskRemoveButton"></button>
             </li>
             `;
