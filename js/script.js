@@ -1,14 +1,5 @@
 {
-    const tasks = [
-        {
-            content: "task1",
-            done: true,
-        },
-        {
-            content: "task2",
-            done: false,
-        }
-    ];
+    const tasks = [];
 
     const newTask = (addNewTask) => {
         tasks.push({
@@ -44,8 +35,7 @@
         });
     };
 
-    const render = () => {
-
+    const renderTaskList = () => {
         let htmlString = "";
 
         for (task of tasks) {
@@ -58,7 +48,11 @@
             `;
         };
         document.querySelector(".js-taskList").innerHTML = htmlString;
+    }
 
+    const render = () => {
+
+        renderTaskList();
         bindEvents();
     };
 
