@@ -1,9 +1,9 @@
 {
     const tasks = [];
 
-    const newTask = (addNewTask) => {
+    const newTask = (newTaskContent) => {
         tasks.push({
-            content: addNewTask,
+            content: newTaskContent,
         }); render();
     };
 
@@ -35,6 +35,11 @@
         });
     };
 
+    const clearInput = () => {
+        document.querySelector(".js-newTask").value = "";
+        document.querySelector(".js-newTask").focus();
+    };
+
     const renderTaskList = () => {
         let htmlString = "";
 
@@ -48,7 +53,7 @@
             `;
         };
         document.querySelector(".js-taskList").innerHTML = htmlString;
-    }
+    };
 
     const render = () => {
 
@@ -59,12 +64,13 @@
     const onFormSubmit = (event) => {
         event.preventDefault();
 
-        addNewTask = document.querySelector(".js-newTask").value.trim();
+        const newTaskContent = document.querySelector(".js-newTask").value.trim();
 
-        if (addNewTask === "") {
+        if (newTaskContent === "") {
             return;
         }
-        newTask(addNewTask);
+        newTask(newTaskContent);
+        clearInput();
     };
 
     const init = () => {
