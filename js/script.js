@@ -1,6 +1,6 @@
 {
     let tasks = [];
-
+    
     const newTask = (newTaskContent) => {
         tasks = [
             ...tasks,
@@ -10,7 +10,10 @@
     };
 
     const taskRemove = (index) => {
-        tasks.splice(index, 1);
+        tasks = [
+            ...tasks.slice(0, index),
+            ...tasks.slice(index + 1),
+        ];
         render();
     };
 
