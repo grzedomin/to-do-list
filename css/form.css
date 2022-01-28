@@ -18,8 +18,9 @@
     padding: 10px;
     border: none;
     margin-left: 10px;
+    background-color: teal;
+    color: #fff;
 }
-
 
 @media (max-width: 767px) {
     .form__button {
@@ -31,5 +32,5 @@
 }
 
 .form__button:hover {
-    background-color: #ddd;
+    background-color: rgb(9, 151, 151);
 }
