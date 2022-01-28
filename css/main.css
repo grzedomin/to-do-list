@@ -5,12 +5,26 @@
 }
 
 .section__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid #eee;
     padding: 20px;
-    border-bottom: 2px solid #ddd;
 }
 
 .section__subHeader{
     margin: 0;
+}
+
+.section__button {
+    background: none;
+    border: none;
+    color: teal;
+    margin: 0 5px;
+}
+
+.section__button:hover {
+    cursor: pointer;
 }
 
 .section__form {
@@ -99,7 +113,3 @@
     background-color: rgb(106, 209, 81);
 }
 
-.section__button {
-    font-size: 30px;
-
-}
