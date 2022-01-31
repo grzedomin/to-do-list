@@ -28,6 +28,14 @@
         render();
     };
 
+    const toggleTasksDone = () => {
+        tasks = tasks.map((task) => ({
+            ...task,
+            done: true,
+        }));
+        render();
+    };
+
     const bindEvents = () => {
         const removeTasks = document.querySelectorAll(".js-taskRemove");
 
@@ -100,11 +108,7 @@
 
         if (toggleAllTasksDone) {
             toggleAllTasksDone.addEventListener("click", () => {
-                tasks = tasks.map((task) => ({
-                    ...task,
-                    done: true,
-                }));
-                render();
+                toggleTasksDone();
             });
         };
     };
