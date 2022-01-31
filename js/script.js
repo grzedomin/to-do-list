@@ -76,7 +76,7 @@
         }
 
         buttonsElement.innerHTML = `
-            <button class="section__button js-hideDoneTasks">
+            <button class="section__button js-toggleHideDoneTasks">
                 ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
             </button>
 
@@ -88,7 +88,7 @@
     };
 
     const bindButtons = () => {
-        toggleHideDoneTasks = document.querySelector(".js-hideDoneTasks");
+        toggleHideDoneTasks = document.querySelector(".js-toggleHideDoneTasks");
 
         if (toggleHideDoneTasks) {
             toggleHideDoneTasks.addEventListener("click", () => {
