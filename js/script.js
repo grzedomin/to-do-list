@@ -18,8 +18,8 @@
         render();
     };
 
-    const toggleTaskDone = (task) => {
-        tasks[task].done = !tasks[task].done;
+    const toggleTaskDone = (index) => {
+        tasks = tasks.map((task, taskIndex) => (taskIndex === index) ? ({ ...task, done: !task.done }) : ({ ...task }));
         render();
     };
 
@@ -39,9 +39,9 @@
 
         const toggleDoneTask = document.querySelectorAll(".js-taskDone");
 
-        toggleDoneTask.forEach((toggleDone, task) => {
+        toggleDoneTask.forEach((toggleDone, index) => {
             toggleDone.addEventListener("click", () => {
-                toggleTaskDone(task);
+                toggleTaskDone(index);
             });
         });
     };
@@ -82,7 +82,7 @@
 
 
             <button class="section__button">
-                Ukoncz wszystkie
+            Ukoncz wszystkie
             </button>
         `;
     };
