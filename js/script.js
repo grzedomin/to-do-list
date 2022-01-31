@@ -81,8 +81,8 @@
             </button>
 
 
-            <button class="section__button">
-            Ukoncz wszystkie
+            <button class="section__button js-toggleAllTasksDone"${tasks.every(({done}) => done) ? "disabled" : ""}>
+            Ukończ wszystkie
             </button>
         `;
     };
@@ -93,6 +93,18 @@
         if (toggleHideDoneTasks) {
             toggleHideDoneTasks.addEventListener("click", () => {
                 toggleHideTasksDone();
+            });
+        };
+
+        const toggleAllTasksDone = document.querySelector(".js-toggleAllTasksDone");
+
+        if (toggleAllTasksDone) {
+            toggleAllTasksDone.addEventListener("click", () => {
+                tasks = tasks.map((task) => ({
+                    ...task,
+                    done: true,
+                }));
+                render();
             });
         };
     };

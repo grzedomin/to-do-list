@@ -22,6 +22,9 @@
     color: teal;
     margin: 0 5px;
 }
+.section__button:disabled{
+    color: rgb(189, 189, 189);
+}
 
 .section__button:hover {
     cursor: pointer;
