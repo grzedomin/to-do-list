@@ -12,8 +12,22 @@
     padding: 20px;
 }
 
+@media (max-width: 767px) {
+	.section__header {
+	   display: flex;
+       flex-wrap: wrap;
+       flex-direction: column;
+	}
+}
+
 .section__subHeader{
     margin: 0;
+}
+@media (max-width:767px){
+    .section__buttons {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .section__button {
@@ -23,6 +37,13 @@
     margin: 0 5px;
     transition: 0.5s;
 }
+
+@media (max-width:767px){
+    .section__button {
+        padding-top: 15px;
+    }
+}
+
 .section__button:disabled{
     color: rgb(189, 189, 189);
 }
