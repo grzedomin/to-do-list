@@ -1,0 +1,40 @@
+.section {
+    background-color: #fff;
+    box-shadow: 0 0 5px #ddd;
+    margin-bottom: 10px;
+}
+
+.section__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid #eee;
+    padding: 20px;
+}
+
+.section__subHeader{
+    margin: 0;
+}
+
+.section__button {
+    background: none;
+    border: none;
+    color: teal;
+    margin: 0 5px;
+}
+.section__button:disabled{
+    color: rgb(189, 189, 189);
+}
+
+.section__button:hover {
+    cursor: pointer;
+}
+
+.section__form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
+}
