@@ -21,6 +21,7 @@
     border: none;
     color: teal;
     margin: 0 5px;
+    transition: 0.5s;
 }
 .section__button:disabled{
     color: rgb(189, 189, 189);
@@ -28,6 +29,7 @@
 
 .section__button:hover {
     cursor: pointer;
+    color: rgb(16, 175, 175);
 }
 
 .section__form {

@@ -1,4 +1,3 @@
-
 .form__input {
     width: 100%;
     max-width: 600px;
@@ -20,6 +19,7 @@
     margin-left: 10px;
     background-color: teal;
     color: #fff;
+    transition: 0.5s;
 }
 
 @media (max-width: 767px) {
@@ -33,4 +33,5 @@
 
 .form__button:hover {
     background-color: rgb(9, 151, 151);
+    transform:scale(115%)
 }
