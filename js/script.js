@@ -73,9 +73,9 @@
         for (task of tasks) {
             htmlString += `
             <li class="main__listItem${task.done && hideDoneTasks ? " main__listItem--hidden" : ""}">
-                <button class="js-taskDone main__taskDoneButton${task.done ? " main__taskDoneButton--done" : ""}"></button>
+                <button class="js-taskDone main__taskDoneButton">${task.done ? "✓" : ""}</button>
                    <span class="main__taskListContent${task.done ? " main__listItem--done" : ""}">${task.content}</span>
-                <button class="js-taskRemove main__taskRemoveButton"></button>
+                <button class="js-taskRemove main__taskRemoveButton">🗑</button>
             </li>
             `;
         };
