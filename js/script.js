@@ -95,27 +95,19 @@
         `;
     };
 
-    const bindButtons = () => {
-        toggleHideDoneTasks = document.querySelector(".js-toggleHideDoneTasks");
-
-        if (toggleHideDoneTasks) {
-            toggleHideDoneTasks.addEventListener("click", () => {
-                toggleHideTasksDone();
-            });
-        };
-
+    const bindButtonsEvents = () => {
+        const toggleHideDoneTasks = document.querySelector(".js-toggleHideDoneTasks");
         const toggleAllTasksDone = document.querySelector(".js-toggleAllTasksDone");
 
-        if (toggleAllTasksDone) {
-            toggleAllTasksDone.addEventListener("click", () => {
-                toggleTasksDone();
-            });
-        };
+        if(toggleHideDoneTasks && toggleAllTasksDone) {
+            toggleHideDoneTasks.addEventListener("click", toggleHideTasksDone);
+            toggleAllTasksDone.addEventListener("click", toggleTasksDone);
+        }
     };
 
     const render = () => {
         renderButtons();
-        bindButtons();
+        bindButtonsEvents();
 
         renderTaskList();
         bindEvents();
